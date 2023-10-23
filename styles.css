@@ -1,9 +1,11 @@
-/* Reset some default styles */
+
 :root {
-    --background-color: #F4DFB6;
-    --primary-color: #D6D46D;
-    --call-to-action: #9A4444;
-    --secondary-color: #DE8F5F;
+    --main-color: #3f6b4c;
+    --secondry-color: #4C4B16;
+    --main-supporting-color: #F7F1E5;
+    --call-to-action: #ff7462;
+    --power-color: #3f6b4c;
+
 }
 
 body, h1, h2, h3, p, ul, li {
@@ -13,24 +15,25 @@ body, h1, h2, h3, p, ul, li {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: var(--power-color);
 }
 
-/* Header styles */
 header {
-    background-color: #333;
-    color: var(--background-color);
+    background-color: var(--main-supporting-color);
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; 
+    padding: 1vh;
     position: sticky;
-    top: 0; 
+    top: 0;
     z-index: 100;
+    height: 15vh;
 }
 
 .logo img {
-    max-height: 60px;
+    height: 10vh;
+    border-radius: 3px;
 }
 
 nav ul {
@@ -39,12 +42,13 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin: 1vh;
+    
 }
 
 nav a {
     text-decoration: none;
-    color: var(--background-color);
+    color: var(--power-color);
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -53,19 +57,49 @@ nav a:hover {
     color: var(--call-to-action);
 }
 
-/* Hero section styles */
-#hero {
-    background-image: url('hero-image.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
+.lp-1 {
     position: relative;
     text-align: center;
-    color: var(--background-color);
+    width: 100%;
+    height: 85vh;
+    background-color: #FAD6A5;
+    overflow: hidden;
+}
+
+
+.restaurant {
+    transition: opacity 1s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 101%;
+    z-index: 50;
 }
 
 
 
+
+
+#lp-1-arrw {
+    position: absolute;
+    z-index: 1;
+    color: var(--main-color);
+    font-size: 5rem;
+    z-index: 51;
+    top: 73vh;
+    
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+.lp-2 {
+    position: relative;
+    height: 85vh;
+    width: 100%;
+    background-color: #61764B;
+}
 
 
 /* Button styles */
@@ -73,7 +107,7 @@ nav a:hover {
     display: inline-block;
     padding: 10px 20px;
     background-color: var(--call-to-action);
-    color: var(--background-color);
+    color: var(--main-color);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -86,11 +120,17 @@ nav a:hover {
 
 /* Menu section styles */
 #menu {
-    background-color: var(--background-color);
+    background-color: var(--main-supporting-color);
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+    grid-template-columns: 1fr 1fr; /* By default, use two columns */
+}
+
+@media (max-width: 400px) {
+    #menu {
+        grid-template-columns: 1fr; /* Use only one column when viewport width is less than 400px */
+    }
 }
 
 .menu-item {
@@ -99,7 +139,7 @@ nav a:hover {
     padding: 10px;
     text-align: center;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-    background-color: var(--primary-color);
+    background-color: var(--main-color);
 }
 
 .menu-item img {
@@ -149,6 +189,8 @@ nav a:hover {
 #contact {
     background-color: var(--background-color);
     padding: 20px;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* Footer styles */
@@ -192,31 +234,27 @@ footer {
 }
 
 .menu-item3 > h1 {
-    color: var(--call-to-action);
+    color: var(--main-color);
 }
 
-.hero-content {
-    background-image: url('restaurantpic1.jpg');
-    background-size: cover;    /* This will cover the entire viewport of the .hero-content div */
-    background-position: center; /* This will center the image in the div */
-    background-repeat: no-repeat; /* This ensures the image doesn't repeat */
-    /* Your other existing properties... */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Make sure to set a fallback height and width or use padding to ensure the div is not collapsed when content is minimal */
-    min-height: 100%;  /* Set this to whatever height you desire */
-    width: 100%;  /* This will ensure it takes up the full width of its parent container */
-    text-align: center;
+.menu-item2 > h2 {
+    color: var(--secondry-color);
 }
 
-.hero-content > *:first-child {
-    margin-top: 22vh;
 
+
+
+
+
+
+
+
+.active {
+  background-color: #717171;
 }
 
-.hero-content > * {
-    margin: 1%;
-}
+
+
+
+
 
