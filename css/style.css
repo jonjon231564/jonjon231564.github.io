@@ -34,10 +34,14 @@
 
 html,
 body {
+	--statement-font: "Allura";
+	--body-font: "cinzel";
+	--heading-font: "Parisienne";
 	height: 100%;
-	font-family: "Open Sans", sans-serif;
+	font-family: var(--body-font);
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+	font-family: var(--body-font);
 }
 
 h1,
@@ -49,7 +53,7 @@ h6 {
 	margin: 0;
 	color: #111111;
 	font-weight: 400;
-	font-family: "Quantico", sans-serif;
+	font-family: var(--heading-font);
 }
 
 h1 {
@@ -78,7 +82,7 @@ h6 {
 
 p {
 	font-size: 15px;
-	font-family: "Open Sans", sans-serif;
+	font-family: var(--body-font);
 	color: #666666;
 	font-weight: 400;
 	line-height: 26px;
@@ -119,7 +123,7 @@ ol {
 
 .section-title h2 {
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-bottom: 15px;
 }
@@ -130,7 +134,7 @@ ol {
 
 .set-bg {
 	background-repeat: no-repeat;
-	background-size: cover;
+	
 	background-position: top center;
 }
 
@@ -164,22 +168,22 @@ ol {
 	font-size: 16px;
 	padding: 14px 30px;
 	color: #ffffff;
-	background: #009603;
+	background: #035468;
 	text-transform: uppercase;
-	font-weight: 700;
-	font-family: "Quantico", sans-serif;
+	font-weight: 400;
+	font-family: var(--heading-font);
 }
 
 .site-btn {
 	font-size: 15px;
 	color: #ffffff;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	font-family: "Quantico", sans-serif;
+	font-family: var(--heading-font);
 	display: inline-block;
 	padding: 14px 30px 12px;
-	background: #009603;
+	background: #035468;
 	border: none;
 }
 
@@ -328,10 +332,15 @@ ol {
 	float: left;
 	padding: 30px 0;
 	margin-right: 80px;
+	
 }
 
 .logo a {
 	display: inline-block;
+}
+
+.logo a img {
+	height: 14vh;
 }
 
 .nav-menu {
@@ -365,13 +374,13 @@ ol {
 
 .nav-menu ul li a {
 	font-size: 16px;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	color: #111111;
 	display: block;
 	padding: 32px 8px 30px;
 	position: relative;
-	font-family: "Quantico", sans-serif;
+	font-family: var(--body-font);
 }
 
 .nav-menu ul li a:after {
@@ -380,7 +389,7 @@ ol {
 	bottom: 0;
 	height: 3px;
 	width: 100%;
-	background: #009603;
+	background: #035468;
 	content: "";
 	opacity: 0;
 	-webkit-transition: all 0.3s;
@@ -423,7 +432,7 @@ ol {
 	height: 50px;
 	width: 50px;
 	color: #ffffff;
-	background: #009603;
+	background: #035468;
 	line-height: 50px;
 	text-align: center;
 	cursor: pointer;
@@ -490,7 +499,7 @@ ol {
 .hs-item .hs-text h2 {
 	font-size: 60px;
 	color: #ffffff;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-bottom: 20px;
 	position: relative;
@@ -503,6 +512,7 @@ ol {
 
 .hs-item .hs-text p {
 	color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 	line-height: 30px;
 	margin-bottom: 32px;
 	position: relative;
@@ -511,6 +521,7 @@ ol {
 	-o-transition: all 0.5s ease-out;
 	transition: all 0.5s ease-out;
 	opacity: 0;
+	font-size: 20px;
 }
 
 .hs-item .hs-text .primary-btn {
@@ -557,7 +568,7 @@ ol {
 
 .services-item h3 {
 	color: #191039;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-bottom: 10px;
 }
@@ -614,7 +625,7 @@ ol {
 
 .cs-item .cs-text h4 {
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-bottom: 10px;
 	opacity: 0;
@@ -625,7 +636,7 @@ ol {
 
 .cs-item .cs-text span {
 	font-size: 17px;
-	color: #009603;
+	color: #035468;
 	display: block;
 	opacity: 0;
 	-webkit-transition: all 0.3s;
@@ -670,7 +681,7 @@ ol {
 }
 
 .filter-controls ul li.active {
-	color: #009603;
+	color: #035468;
 }
 
 .filter-controls ul li:after {
@@ -765,7 +776,7 @@ ol {
 
 .portfolio-filter .pf-item .pf-text h4 {
 	color: #ffffff;
-	font-weight: 700;
+	font-weight: 400;
 	text-align: center;
 	margin-bottom: 5px;
 	position: relative;
@@ -777,7 +788,7 @@ ol {
 
 .portfolio-filter .pf-item .pf-text span {
 	font-size: 15px;
-	color: #009603;
+	color: #035468;
 	position: relative;
 	top: 40px;
 	-webkit-transition: all 0.6s;
@@ -800,19 +811,19 @@ ol {
 }
 
 .load-more-btn.portfolio-btn a {
-	background: #009603;
+	background: #035468;
 }
 
 .load-more-btn a {
 	font-size: 15px;
 	color: #ffffff;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	display: inline-block;
 	padding: 15px 102px 13px;
 	background: #000606;
-	font-family: "Quantico", sans-serif;
+	font-family: var(--heading-font);
 }
 
 /*---------------------
@@ -856,7 +867,7 @@ ol {
 .fs-widget h5 {
 	font-size: 20px;
 	color: #ffffff;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-bottom: 35px;
 }
@@ -901,7 +912,7 @@ ol {
 	font-size: 15px;
 	color: #c4c4c4;
 	padding-left: 20px;
-	border: 1px solid #009603;
+	border: 1px solid #035468;
 	background: transparent;
 }
 
@@ -928,7 +939,7 @@ ol {
 .fs-widget .fw-subscribe form button {
 	font-size: 18px;
 	color: #ffffff;
-	background: #009603;
+	background: #035468;
 	height: 50px;
 	width: 50px;
 	border: none;
@@ -970,7 +981,7 @@ ol {
 	right: -18px;
 	top: 1px;
 	content: "5";
-	font-family: "ElegantIcons";
+	font-family: var(--body-font);
 }
 
 .breadcrumb-option .bo-links span {
@@ -994,7 +1005,7 @@ ol {
 	width: 100px;
 	line-height: 100px;
 	text-align: center;
-	background: #009603;
+	background: #035468;
 	font-size: 30px;
 	color: #ffffff;
 	display: inline-block;
@@ -1046,7 +1057,7 @@ ol {
 .about-text .at-list .al-item .al-text h5 {
 	font-size: 20px;
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-bottom: 8px;
 }
@@ -1081,7 +1092,7 @@ ol {
 .team-item .ti-text h5 {
 	font-size: 20px;
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-bottom: 5px;
 }
@@ -1089,7 +1100,7 @@ ol {
 .team-item .ti-text span {
 	display: block;
 	font-size: 15px;
-	color: #009603;
+	color: #035468;
 	margin-bottom: 20px;
 }
 
@@ -1120,7 +1131,7 @@ ol {
 .cta-text h2 {
 	font-size: 50px;
 	color: #ffffff;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-bottom: 15px;
 }
@@ -1187,7 +1198,7 @@ ol {
 
 .testimonial-item .ti-author .ta-text h5 {
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-bottom: 5px;
 }
@@ -1222,12 +1233,12 @@ ol {
 .so-item .so-title .so-number {
 	font-size: 16px;
 	color: #ffffff;
-	font-weight: 600;
+	font-weight: 400;
 	width: 36px;
 	height: 36px;
 	line-height: 36px;
 	text-align: center;
-	background: #009603;
+	background: #035468;
 	float: left;
 	margin-right: 20px;
 }
@@ -1235,7 +1246,7 @@ ol {
 .so-item .so-title h5 {
 	font-size: 20px;
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	overflow: hidden;
 	line-height: 36px;
@@ -1292,7 +1303,7 @@ ol {
 }
 
 .pricing-item:hover:after {
-	background: #009603;
+	background: #035468;
 }
 
 .pricing-item:hover .pi-price h2 {
@@ -1304,7 +1315,7 @@ ol {
 }
 
 .pricing-item:hover .pi-title {
-	background: #009603;
+	background: #035468;
 }
 
 .pricing-item:hover .pi-title h3 {
@@ -1313,7 +1324,7 @@ ol {
 }
 
 .pricing-item:hover .pi-text .primary-btn {
-	background: #009603;
+	background: #035468;
 	color: #ffffff;
 }
 
@@ -1325,8 +1336,8 @@ ol {
 }
 
 .pricing-item .pi-price h2 {
-	color: #009603;
-	font-weight: 700;
+	color: #035468;
+	font-weight: 400;
 	-webkit-transition: all 0.2s;
 	-o-transition: all 0.2s;
 	transition: all 0.2s;
@@ -1351,7 +1362,7 @@ ol {
 
 .pricing-item .pi-title h3 {
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	padding-bottom: 32px;
 	text-transform: uppercase;
 	border-bottom: 1px solid #ebebeb;
@@ -1411,7 +1422,7 @@ ol {
 
 .ph-text h2 {
 	color: #ffffff;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-bottom: 12px;
 }
@@ -1419,7 +1430,7 @@ ol {
 .ph-text ul li {
 	list-style: none;
 	display: inline-block;
-	color: #009603;
+	color: #035468;
 	font-size: 15px;
 	margin-right: 28px;
 	position: relative;
@@ -1487,7 +1498,7 @@ ol {
 
 .pd-more-text h2 {
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	margin-bottom: 30px;
 }
 
@@ -1526,7 +1537,7 @@ ol {
 
 .rp-item .rp-text h5 {
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	font-size: 20px;
 	text-transform: uppercase;
 	margin-bottom: 5px;
@@ -1534,8 +1545,8 @@ ol {
 
 .rp-item .rp-text span {
 	font-size: 15px;
-	font-weight: 600;
-	color: #009603;
+	font-weight: 400;
+	color: #035468;
 	display: block;
 }
 
@@ -1564,9 +1575,9 @@ ol {
 .blog-item .bi-text .label {
 	font-size: 12px;
 	color: #ffffff;
-	font-weight: 600;
+	font-weight: 400;
 	display: inline-block;
-	background: #009603;
+	background: #035468;
 	padding: 2px 12px;
 	text-transform: uppercase;
 }
@@ -1579,7 +1590,7 @@ ol {
 .blog-item .bi-text h5 a {
 	font-size: 20px;
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	line-height: 27px;
 	text-transform: uppercase;
 }
@@ -1626,7 +1637,7 @@ ol {
 .blog-pagination a {
 	display: inline-block;
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: 400;
 	background: #f2f2f2;
 	color: #111111;
 	padding: 12px 22px;
@@ -1651,7 +1662,7 @@ ol {
 
 .blog-sidebar .bs-item h5 {
 	font-size: 20px;
-	font-weight: 700;
+	font-weight: 400;
 	color: #111111;
 	text-transform: uppercase;
 	position: relative;
@@ -1686,7 +1697,7 @@ ol {
 .blog-sidebar .bs-item .bi-feature-post .fp-item .fp-text h6 {
 	font-size: 15px;
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	line-height: 20px;
 }
@@ -1793,7 +1804,7 @@ ol {
 	right: -18px;
 	top: 1px;
 	content: "5";
-	font-family: "ElegantIcons";
+	font-family: var(--body-font);
 }
 
 .blog-details-text .bd-title .bt-bread span {
@@ -1804,7 +1815,7 @@ ol {
 .blog-details-text .bd-title h2 {
 	font-size: 42px;
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	line-height: 55px;
 	margin-bottom: 18px;
 }
@@ -1869,7 +1880,7 @@ ol {
 	font-size: 20px;
 	color: #111111;
 	line-height: 35px;
-	font-weight: 600;
+	font-weight: 400;
 	font-style: italic;
 	padding-top: 24px;
 }
@@ -1940,7 +1951,7 @@ ol {
 	display: inline-block;
 	font-size: 15px;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 400;
 	color: #111111;
 	margin-right: 20px;
 }
@@ -2008,7 +2019,7 @@ ol {
 	font-size: 15px;
 	color: #111111;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 400;
 	margin-bottom: 25px;
 }
 
@@ -2021,9 +2032,9 @@ ol {
 .blog-details-text .bd-related-post .post-item .pi-text .label {
 	font-size: 12px;
 	color: #ffffff;
-	font-weight: 600;
+	font-weight: 400;
 	display: inline-block;
-	background: #009603;
+	background: #035468;
 	padding: 2px 12px;
 	text-transform: uppercase;
 }
@@ -2031,7 +2042,7 @@ ol {
 .blog-details-text .bd-related-post .post-item .pi-text h5 {
 	font-size: 20px;
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	line-height: 23px;
 	letter-spacing: 0.5px;
 	margin-top: 10px;
@@ -2060,7 +2071,7 @@ ol {
 
 .blog-details-text .bd-author .avatar-text h4 {
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-bottom: 8px;
 }
@@ -2084,7 +2095,7 @@ ol {
 
 .blog-details-text .bd-comment-form h4 {
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-bottom: 35px;
 }
@@ -2111,7 +2122,7 @@ ol {
 .blog-details-text .bd-comment-form .comment-item .ci-text h5 {
 	font-size: 20px;
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-right: 8px;
 }
@@ -2135,7 +2146,7 @@ ol {
 
 .blog-details-text .bd-comment-form .comment-item .ci-text ul li i {
 	font-size: 14px;
-	color: #009603;
+	color: #035468;
 	margin-right: 5px;
 }
 
@@ -2306,7 +2317,7 @@ ol {
 
 .contact-text h3 {
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-bottom: 15px;
 }
@@ -2324,7 +2335,7 @@ ol {
 .contact-text .ct-item .ct-icon {
 	height: 80px;
 	width: 80px;
-	background: #009603;
+	background: #035468;
 	border-radius: 50%;
 	font-size: 40px;
 	line-height: 80px;
@@ -2342,7 +2353,7 @@ ol {
 .contact-text .ct-item .ct-text h5 {
 	font-size: 20px;
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-bottom: 10px;
 }
@@ -2378,7 +2389,7 @@ ol {
 
 .contact-form h3 {
 	color: #111111;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin-bottom: 35px;
 }
@@ -2576,12 +2587,12 @@ ol {
 	}
 	.slicknav_nav a:hover {
 		border-radius: 0;
-		background: #009603;
+		background: #035468;
 		color: #fff;
 	}
 	.slicknav_nav .slicknav_row:hover {
 		border-radius: 0;
-		background: #009603;
+		background: #035468;
 		color: #fff;
 	}
 	.slicknav_nav .slicknav_row,
@@ -2710,12 +2721,12 @@ ol {
 	}
 	.slicknav_nav a:hover {
 		border-radius: 0;
-		background: #009603;
+		background: #035468;
 		color: #fff;
 	}
 	.slicknav_nav .slicknav_row:hover {
 		border-radius: 0;
-		background: #009603;
+		background: #035468;
 		color: #fff;
 	}
 	.slicknav_nav .slicknav_row,
@@ -2764,7 +2775,7 @@ ol {
 @media only screen and (max-width: 479px) {
 	.load-more-btn a {
 		padding: 15px 70px 13px;
-	}f
+	}
 	.ph-text {
 		background: rgba(0, 0, 0, 0.7);
 		display: inline-block;
@@ -2829,12 +2840,12 @@ ol {
 	}
 	.slicknav_nav a:hover {
 		border-radius: 0;
-		background: #009603;
+		background: #035468;
 		color: #fff;
 	}
 	.slicknav_nav .slicknav_row:hover {
 		border-radius: 0;
-		background: #009603;
+		background: #035468;
 		color: #fff;
 	}
 	.slicknav_nav .slicknav_row,
@@ -2897,12 +2908,78 @@ ol {
 	}
 }
 
-#jihannah {
-	color: #B99470;
-	font-family: 'Alex Brush', cursive;
+.header-section {
+	background-color: rgba(255, 255, 255, 0.2);
+	position: sticky;
+	top: 0vh;
+	z-index: 1000;
+	font-family: Montserrat;
+	height: 14vh;
+	
+}
 
+.hero-section {
+	transform: translateY(-17vh); /* Adjust the value to move the div up or down */
+	height: 100vh;
+}
 
-
-
+.logo {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0%;
+	padding-bottom: 0%;
 
 }
+
+.logo a img {
+	padding: 0;
+	margin: 0;
+
+}
+
+.nav-menu ul li a {
+	color: whitesmoke;
+}
+
+.set-bg { 
+	height: 104vh;
+}
+
+.services-item {
+	background-color: #683a03;
+}
+
+.services-item h3 {
+	color: white;
+}
+
+.services-item p {
+	color: white;
+}
+
+.load-more-btn a {
+	background-color: #035468;
+}
+
+.footer-section {
+	background-color: ;
+
+}
+
+.fa-logo a img {
+	height: 20vh;
+}
+.cs-text {
+	background-color: #683a03;
+}
+
+.cs-item .cs-text h4 {
+	color: white;
+}
+
+.cs-item .cs-text span {
+	color: white;
+}
+
+
+
